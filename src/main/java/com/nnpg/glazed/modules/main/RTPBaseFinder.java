@@ -24,7 +24,7 @@ public class RTPBaseFinder extends Module {
     private long lastTeleportTime = 0;
 
     public RTPBaseFinder() {
-        super(GlazedAddon.CATEGORY, "rtp-base-finder", "Aimbots downward, holds left click to mine to Y=-58, then runs /rtp east.");
+        super(GlazedAddon.CATEGORY, "rtp-base-finder", "O boktan kirli fareni alir, en asagiya kadar tutar, boktan kordinatlarinda Y=-58e kadar kazar, sonra da o boktan sunucuda /rtpanadunya komutunu calistirir.");
     }
 
     @Override
@@ -85,7 +85,7 @@ public class RTPBaseFinder extends Module {
 
     private void triggerTeleport() {
         releaseLeftClick();
-        mc.player.networkHandler.sendChatCommand("rtp east");
+        mc.player.networkHandler.sendChatCommand("rtpanadünya");
         lastTeleportTime = System.currentTimeMillis();
         waitingForTeleport = true;
         if (notifications.get()) info("Reached Y=-58. Teleporting east.");
